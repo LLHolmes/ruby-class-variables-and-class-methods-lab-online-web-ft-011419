@@ -10,7 +10,7 @@ class Song
     @name = title
     @artist = artist
     @genre =  genre
-    @@genres << genre if @@genres.includes?(genre) == false
+    @@genres << genre
     @@count += 1
   end
   
@@ -19,7 +19,7 @@ class Song
   end
   
   def genres
-    @@genres
+    @@genres.uniq
   end
   
   def artists
