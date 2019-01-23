@@ -17,26 +17,26 @@ class Song
     @@count += 1
   end
   
-  def count
+  def self.count
     @@count
   end
   
-  def genres
+  def self.genres
     @@genres.uniq
   end
   
-  def artists
+  def self.artists
     @@artists.uniq
   end
   
-  def genre_count
+  def self.genre_count
     @@genres.uniq.each do |type|
       @@genre_count[type] = @@genres.count(type)
     end
     @@genre_count
   end
   
-  def artist_count
+  def self.artist_count
     @@artists.each do |band|
       if @@artist_count.has_key?(band) == true
         @@artist_count[band] += 1
