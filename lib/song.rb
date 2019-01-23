@@ -35,7 +35,8 @@ class Song
   end
   
   def artist_count
-    @@artist_count
+    @@artists.each do |band|
+      @@artist_count[band] += 1 if @@artist_count.has_key?(band)
   end
     
 end
