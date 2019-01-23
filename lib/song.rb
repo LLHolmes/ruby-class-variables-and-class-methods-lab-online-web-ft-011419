@@ -10,6 +10,7 @@ class Song
     @name = title
     @artist = artist
     @genre =  genre
+    @@genres << genre if @@genres.includes?(genre) == false
     @@count += 1
   end
   
